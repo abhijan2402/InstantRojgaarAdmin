@@ -1,0 +1,89 @@
+.form-container {
+  margin: 4rem;
+  padding: 1rem 4rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.form-container h3 {
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem 0rem;
+}
+.customTextField {
+  width: 600px; /* Adjust the width as needed */
+  font-size: 16px;
+}
+.form_field_1 {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+  gap: 4rem;
+}
+.input-fields {
+  padding: 10px 0px;
+  width: 100%;
+}
+input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.477);
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+#mySelect {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 0.5rem;
+}
+#mySelect option {
+  font-size: 14px;
+}
+.lable {
+  font-weight: 500;
+}
+#Description {
+  resize: vertical;
+  width: 100%;
+  outline: none;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: rgb(71, 71, 71);
+  letter-spacing: 1px;
+  padding: 0.8rem .6rem;
+  border: 1px solid rgba(128, 128, 128, 0.477);
+}
+
+.salary {
+  display: flex;
+}
+.salary_type {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.salary input {
+  width: 2rem;
+}
+
+.post_job_btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin: 2rem 0rem;
+  border: none;
+  outline: none;
+  background-color: #1966d2d5;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease-in-out all;
+}
+.post_job_btn:hover {
+  background-color: #1967d2;
+}

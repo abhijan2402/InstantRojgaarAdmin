@@ -1,15 +1,15 @@
 import "./App.css";
-// import PostJobForm from "./components/postjob";
-// import Form from "./components/Form/Form";
+
 import Card from "./components/Card/Card";
+import JobPostForm from "./components/Form/JobPostForm"
+import JobDeatils from "./components/JobDetails/JobDeatils";
 
 function App() {
   return (
     <div className="App">
-      {/* <PostJobForm />
-
-      <Form /> */}
       <Card />
+      <JobPostForm/>
+      <JobDeatils/>
     </div>
   );
 }

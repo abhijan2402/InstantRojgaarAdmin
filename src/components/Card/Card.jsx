@@ -8,20 +8,16 @@ const jobCard = () => {
             <div className="job_details">
                 <div className="job_profile_company_dec">
                     <div className='job_profile'>
-                        <img src={logo} alt="profile" className='img-fluid profile-image' />
                         <h5>Web Developer <br /> <span>@Company Name</span> </h5>
                     </div>
                     <div className="job_profile_dec">
                         <p><span>Salary:</span> $20K - $50K</p>
-                        <p><span>Experiences:</span> 2 - 3 years</p>
+                        <p><span>Minimum Experience:</span> 2 - 3 years</p>
                     </div>
                     <div className="job_profile_dec">
-                        <p><span>Deadline:</span> 05-06-2023</p>
+                        <p><span>Qualification:</span> BE/B.Tech</p>
                         <p><span>Location: </span> New York, USA</p>
                     </div>
-                </div>
-                <div className="saved_job">
-                    <i className="bi bi-bookmark"></i>
                 </div>
             </div>
             <div className=" job-type">
@@ -31,9 +27,12 @@ const jobCard = () => {
                     <p className='job_working_type_remote'>Remote</p>
                 </div>
                 <div className=" apply_job">
-                    <p><i className="bi bi-box-arrow-in-right"></i> Apply Now</p>
+                    <p className="approve_btn"><i className="bi bi-box-arrow-in-right"></i> Approve</p>
+                    <p className="reject_btn"><i className="bi bi-box-arrow-in-right"></i> Reject</p>
+                    <p className="details_btn"><i className="bi bi-box-arrow-in-right"></i> Details</p>
                 </div>
             </div>
+           
         </div>
     )
 }

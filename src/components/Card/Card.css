@@ -19,8 +19,7 @@
   align-items: center;
   gap: 4rem;
 }
-.job_profile_company_dec h5 {
-  margin-inline: 1.2rem;
+.job_profile_company_dec h5 {  
   font-size: 1.2rem;
 }
 .job_profile_company_dec span {
@@ -63,14 +62,14 @@
 }
 .apply_job {
   cursor: pointer;
+  display: flex;
+  gap: 2rem;
   transition: 0.3s;
 }
 .apply_job i {
   margin-right: 0.4rem;
 }
-.apply_job:hover {
-  color: blue;
-}
+
 .job_working_type_full {
   border: 1px solid rgba(255, 0, 0, 0.686);
   padding: 0.5rem 1rem;
@@ -107,4 +106,30 @@
 }
 .job_working_type_remote:hover {
   background-color: rgba(0, 0, 255, 0.126);
+}
+
+
+.reject_btn{
+color: rgba(255, 0, 0, 0.684);
+transition: 0.3s;
+font-weight: 700;
+}
+.approve_btn{
+  color: rgba(0, 128, 0, 0.744);
+  transition: 0.3s;
+  font-weight: 700;
+  }
+  .details_btn{
+    color: #1966d2d5;
+    transition: 0.3s;
+    font-weight: 700;
+    }
+.reject_btn:hover{
+color: red;
+}
+.approve_btn:hover{
+  color: green;
+}
+.details_btn:hover{
+  color: #1967d2;
 }

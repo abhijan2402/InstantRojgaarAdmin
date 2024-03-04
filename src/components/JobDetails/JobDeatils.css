@@ -1,0 +1,169 @@
+.deatails_container {
+  display: flex;
+  margin: 4%;
+}
+
+.job_details_container {
+  width: 70%;
+}
+
+hr {
+  margin: 0% 2%;
+  border: 1px solid rgba(0, 0, 0, 0.095);
+}
+
+.job_profile {
+  display: flex;
+  align-items: center;
+}
+.job_details_company_dec {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 2rem;
+}
+.job_details_profile h5 {
+  font-size: 1.8rem;
+}
+.job_details_profile span {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.job_details_dec p {
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  font-size: 1.2rem;
+}
+.job_details_dec p span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.job_desc {
+  padding: 1rem 2rem;
+}
+.job_desc h5 {
+  font-size: 1.2rem;
+  color: #262626e0;
+}
+.job_desc p {
+  font-size: 1rem;
+  padding-top: 0.8rem;
+}
+.experience {
+  padding: 1rem 2rem;
+}
+.experience h5 {
+  font-size: 1.2rem;
+  color: #262626e0;
+}
+.experience p {
+  font-size: 1rem;
+  padding-top: 0.8rem;
+}
+.Key_Respons {
+  padding: 1rem 2rem;
+}
+.Key_Respons h5 {
+  font-size: 1.2rem;
+  color: #262626e0;
+}
+.Key_Respons p {
+  font-size: 1rem;
+  padding-top: 0.8rem;
+}
+.Skill_Experience {
+  padding: 1rem 2rem;
+}
+.Skill_Experience h5 {
+  font-size: 1.2rem;
+  color: #262626e0;
+}
+.Skill_Experience p {
+  font-size: 1rem;
+  padding-top: 0.8rem;
+}
+
+.company-details_container {
+  width: 30%;
+}
+
+
+
+.company_media_handle{
+    margin: 2rem 2rem;
+}
+.company_media_handle h5 {
+  font-size: 1rem;
+  padding: .8rem 0;
+}
+.company_social_link  {
+  display: flex;
+  gap: 1.5rem;
+}
+.company_social_link i {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .company_email{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem;
+  }
+  .company_email h5{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .company_email h5 span i{
+    font-size: 1.2rem;
+    margin-right: .5rem;
+  }
+  .company_email p {
+  
+  }
+  .company_email p span {
+    font-size: 1.1rem;
+    color: blue;
+    cursor: pointer;
+  }
+
+
+  .job_details_btn {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    transition: 0.3s;
+    margin: 1rem 4rem;
+  }
+  
+  .job_details_reject_btn {
+    color: rgba(255, 0, 0, 0.684);
+    transition: 0.3s;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid red;
+    padding: .6rem 2rem;
+    border-radius: 2px;
+
+  }
+  .job_details_approve_btn {
+    color: rgba(0, 128, 0, 0.744);
+    transition: 0.3s;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid green;
+    padding: .6rem 2rem;
+    border-radius: 2px;
+  }
+  .job_details_reject_btn:hover {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.17);
+  }
+  .job_details_approve_btn:hover {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.142);
+  }
