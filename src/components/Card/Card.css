@@ -3,6 +3,7 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   padding: 1.2rem 0rem 1rem 0rem;
   border-radius: 4px;
+  margin-bottom: .8rem;
 }
 .job_details {
   display: flex;

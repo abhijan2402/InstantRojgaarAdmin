@@ -4,8 +4,6 @@ import './JobDeatils.css';
 const JobDeatils = () => {
     return (
         <>
-
-
             <div className='deatails_container'>
                 <div className='job_details_container'>
                     <div className="job_details_company_dec">

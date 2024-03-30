@@ -1,0 +1,53 @@
+/* styles.css */
+.top_nav {
+  background-color: #333;
+  color: #fff;
+}
+.top_nav .logo {
+  padding: 1rem 2rem;
+  letter-spacing: 0.5rem;
+}
+.nav_content_container {
+  display: flex;
+}
+.content_board {
+  padding: 3rem 2rem 0rem 2rem;
+  width: 100%;
+}
+.side_nav {
+  width: 18%;
+}
+.admin-nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  height: 100vh;
+}
+
+.admin-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-nav li {
+  padding: 1rem;
+  margin-left: .5rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.admin-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.admin-dashboard {
+  padding: 20px;
+}
+
+.admin-companies {
+  padding: 20px;
+}
+
+/* Add more styles for other components as needed */

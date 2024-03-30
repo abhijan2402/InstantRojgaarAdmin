@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Card.css"
-import logo from "../../assets/logo.jpg"
 
-const jobCard = () => {
+const JobCard = ({ handleJobDetailsPage }) => {
     return (
         <div className='job_card_container'>
             <div className="job_details">
@@ -29,12 +28,12 @@ const jobCard = () => {
                 <div className=" apply_job">
                     <p className="approve_btn"><i className="bi bi-box-arrow-in-right"></i> Approve</p>
                     <p className="reject_btn"><i className="bi bi-box-arrow-in-right"></i> Reject</p>
-                    <p className="details_btn"><i className="bi bi-box-arrow-in-right"></i> Details</p>
+                    <p className="details_btn" onClick={handleJobDetailsPage}><i className="bi bi-box-arrow-in-right"></i> Details</p>
                 </div>
             </div>
-           
+
         </div>
     )
 }
 
-export default jobCard
+export default JobCard
