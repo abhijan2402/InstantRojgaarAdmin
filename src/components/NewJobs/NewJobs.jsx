@@ -3,7 +3,7 @@ import './NewJobs.css';
 import Card from '../Card/Card';
 import JobDeatils from '../JobDetails/JobDeatils';
 import { db } from '../../firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const NewJobs = () => {
     const [details, setDetails] = useState(false);
@@ -12,7 +12,9 @@ const NewJobs = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const querySnapshot = await getDocs(collection(db, 'JobList'));
+            // Create a query against the collection where status is "pending"
+            const q = query(collection(db, 'JobList'), where('status', '==', 'Pending'));
+            const querySnapshot = await getDocs(q);
             const docs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setData(docs);
         };
@@ -21,21 +23,31 @@ const NewJobs = () => {
     }, []);
 
     console.log(data);
-    const handleJobDetailsPage = (company) => {
-        setSelectedJob(company);
+
+    const handleJobDetailsPage = (JobData) => {
+        setSelectedJob(JobData);
         setDetails(true);
     };
 
     return (
         <div className='newjobs_container'>
-            <h2>{details === false ? <>New Jobs Posted !!</> : <><i onClick={() => setDetails(false)} className="bi bi-arrow-left-square-fill" style={{ cursor: "pointer", marginRight: "1rem" }}></i> Job Details</>}</h2>
-            {
-                details === false ? (
-                    data.map(company => (<Card handleJobDetailsPage={handleJobDetailsPage} key={company.id} company={company} />))
+            <h2>
+                {details === false ? (
+                    <>New Jobs Posted !!</>
                 ) : (
-                    <JobDeatils company={selectedJob} />
-                )
-            }
+                    <>
+                        <i onClick={() => setDetails(false)} className="bi bi-arrow-left-square-fill" style={{ cursor: "pointer", marginRight: "1rem" }}></i>
+                        Job Details
+                    </>
+                )}
+            </h2>
+            {details === false ? (
+                data.map(JobData => (
+                    <Card handleJobDetailsPage={handleJobDetailsPage} key={JobData.id} JobData={JobData} />
+                ))
+            ) : (
+                <JobDeatils company={selectedJob} />
+            )}
         </div>
     );
 };

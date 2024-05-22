@@ -1,10 +1,6 @@
 .deatails_container {
   display: flex;
-  margin: 4%;
-}
-
-.job_details_container {
-  width: 70%;
+  margin: 3% 4%;
 }
 
 hr {
@@ -85,85 +81,37 @@ hr {
   padding-top: 0.8rem;
 }
 
-.company-details_container {
-  width: 30%;
-}
-
-
-
-.company_media_handle{
-    margin: 2rem 2rem;
-}
-.company_media_handle h5 {
-  font-size: 1rem;
-  padding: .8rem 0;
-}
-.company_social_link  {
+.job_details_btn {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  transition: 0.3s;
+  margin: 1rem 4rem;
 }
-.company_social_link i {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
 
-  .company_email{
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 2rem;
-  }
-  .company_email h5{
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .company_email h5 span i{
-    font-size: 1.2rem;
-    margin-right: .5rem;
-  }
-  .company_email p {
-  
-  }
-  .company_email p span {
-    font-size: 1.1rem;
-    color: blue;
-    cursor: pointer;
-  }
-
-
-  .job_details_btn {
-    display: flex;
-    gap: 2rem;
-    padding: 1rem 2rem;
-    transition: 0.3s;
-    margin: 1rem 4rem;
-  }
-  
-  .job_details_reject_btn {
-    color: rgba(255, 0, 0, 0.684);
-    transition: 0.3s;
-    font-weight: 700;
-    cursor: pointer;
-    border: 1px solid red;
-    padding: .6rem 2rem;
-    border-radius: 2px;
-
-  }
-  .job_details_approve_btn {
-    color: rgba(0, 128, 0, 0.744);
-    transition: 0.3s;
-    font-weight: 700;
-    cursor: pointer;
-    border: 1px solid green;
-    padding: .6rem 2rem;
-    border-radius: 2px;
-  }
-  .job_details_reject_btn:hover {
-    color: red;
-    background-color: rgba(255, 0, 0, 0.17);
-  }
-  .job_details_approve_btn:hover {
-    color: green;
-    background-color: rgba(0, 128, 0, 0.142);
-  }
+.job_details_reject_btn {
+  color: rgba(255, 0, 0, 0.684);
+  transition: 0.3s;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 0.6rem 2rem;
+  border-radius: 2px;
+}
+.job_details_approve_btn {
+  color: rgba(0, 128, 0, 0.744);
+  transition: 0.3s;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid green;
+  padding: 0.6rem 2rem;
+  border-radius: 2px;
+}
+.job_details_reject_btn:hover {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.17);
+}
+.job_details_approve_btn:hover {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.142);
+}
