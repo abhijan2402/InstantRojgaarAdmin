@@ -16,7 +16,7 @@
 }
 .Company_profile_dec {
   width: 70%;
-  /* border: 2px solid ; */
+
 }
 .Company_profile_doc {
   width: 10%;
@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 .Company_profile_company_dec h5 {
   font-size: 1.5rem;

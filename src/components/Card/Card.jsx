@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Card.css"
 
-const JobCard = ({ handleJobDetailsPage }) => {
+const JobCard = ({ handleJobDetailsPage, company }) => {
     return (
         <div className='job_card_container'>
             <div className="job_details">
                 <div className="job_profile_company_dec">
                     <div className='job_profile'>
-                        <h5>Web Developer <br /> <span>@Company Name</span> </h5>
+                        <h5>{company.jobRole} <br /> <span>{company.CompanyName}</span> </h5>
                     </div>
                     <div className="job_profile_dec">
-                        <p><span>Salary:</span> $20K - $50K</p>
-                        <p><span>Minimum Experience:</span> 2 - 3 years</p>
+                        <p><span>Salary:</span> {company.Salart}</p>
+                        <p><span>Minimum Experience:</span> {company.MinExp}</p>
                     </div>
                     <div className="job_profile_dec">
-                        <p><span>Qualification:</span> BE/B.Tech</p>
-                        <p><span>Location: </span> New York, USA</p>
+                        <p><span>Qualification:</span> {company.MinQualification}</p>
+                        <p><span>Location: </span> {company.City}</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ const JobCard = ({ handleJobDetailsPage }) => {
                 <div className=" apply_job">
                     <p className="approve_btn"><i className="bi bi-box-arrow-in-right"></i> Approve</p>
                     <p className="reject_btn"><i className="bi bi-box-arrow-in-right"></i> Reject</p>
-                    <p className="details_btn" onClick={handleJobDetailsPage}><i className="bi bi-box-arrow-in-right"></i> Details</p>
+                    <p className="details_btn" onClick={() => handleJobDetailsPage(company)}><i className="bi bi-box-arrow-in-right"></i> Details</p>
                 </div>
             </div>
 

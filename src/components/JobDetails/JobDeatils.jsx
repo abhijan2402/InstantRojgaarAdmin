@@ -1,32 +1,33 @@
 import React from 'react'
 import './JobDeatils.css';
 
-const JobDeatils = () => {
+const JobDeatils = ({ company }) => {
+    console.log("theis is ", company)
     return (
         <>
             <div className='deatails_container'>
                 <div className='job_details_container'>
                     <div className="job_details_company_dec">
                         <div className='job_details_profile'>
-                            <h5>Web Developer <br /> <span>@Company Name</span> </h5>
+                            <h5>{company.jobRole} <br /> <span>{company.CompanyName}</span> </h5>
                         </div>
                         <div className="job_details_dec">
-                            <p><span>Salary:</span> $20K - $50K</p>
-                            <p><span>Minimum Experience:</span> 2 - 3 years</p>
+                            <p><span>Salary:</span> {company.salart}</p>
+                            <p><span>Minimum Experience:</span> {company.MinExp}</p>
                         </div>
                         <div className="job_details_dec">
-                            <p><span>Qualification:</span> BE/B.Tech</p>
-                            <p><span>Location: </span> New York, USA</p>
+                            <p><span>Qualification:</span> {company.MinQualification}</p>
+                            <p><span>Location: </span> {company.CompanyAddress}, {company.City}</p>
                         </div>
                     </div>
                     <hr />
                     <div className="job_desc">
                         <h5>Job Description:</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates suscipit et tenetur perferendis fugiat tempora ducimus nemo odio id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ut quia, autem hic quisquam ea debitis voluptatibus, dicta fuga, fugit corporis! Eos neque ipsum animi exercitationem necessitatibus error mollitia similique!</p>
+                        <p>{company.JobDesc}</p>
                     </div>
                     <div className="experience">
                         <h5>Minimum Experience:</h5>
-                        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates suscipit et tenetur perferendis fugiat tempora ducimus nemo odio id.</p>
+                        <p>{company.MinExp}</p>
                     </div>
                     <div className="Key_Respons">
                         <h5>Key Responsibilities:</h5>
