@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './NewJobs.css';
 import Card from '../Card/Card';
-import JobDeatils from '../JobDetails/JobDeatils';
+import JobDetails from '../JobDetails/JobDeatils';
+import Loader from '../Loader/Loader';
 import { db } from '../../firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
@@ -9,20 +10,20 @@ const NewJobs = () => {
     const [details, setDetails] = useState(false);
     const [data, setData] = useState([]);
     const [selectedJob, setSelectedJob] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    const fetchData = async () => {
+        setLoading(true); // Set loading to true before fetching data
+        const q = query(collection(db, 'JobList'), where('status', '==', 'Pending'));
+        const querySnapshot = await getDocs(q);
+        const docs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setData(docs);
+        setLoading(false); // Set loading to false after data is fetched
+    };
 
     useEffect(() => {
-        const fetchData = async () => {
-            // Create a query against the collection where status is "pending"
-            const q = query(collection(db, 'JobList'), where('status', '==', 'Pending'));
-            const querySnapshot = await getDocs(q);
-            const docs = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-            setData(docs);
-        };
-
         fetchData();
     }, []);
-
-    console.log(data);
 
     const handleJobDetailsPage = (JobData) => {
         setSelectedJob(JobData);
@@ -41,12 +42,14 @@ const NewJobs = () => {
                     </>
                 )}
             </h2>
-            {details === false ? (
+            {loading ? (
+                <Loader /> // Display loader while loading
+            ) : details === false ? (
                 data.map(JobData => (
-                    <Card handleJobDetailsPage={handleJobDetailsPage} key={JobData.id} JobData={JobData} />
+                    <Card handleJobDetailsPage={handleJobDetailsPage} key={JobData.id} JobData={JobData} refreshData={fetchData} />
                 ))
             ) : (
-                <JobDeatils company={selectedJob} />
+                <JobDetails company={selectedJob} refreshData={fetchData} setDetails={setDetails} />
             )}
         </div>
     );

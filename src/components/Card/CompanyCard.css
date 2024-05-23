@@ -90,6 +90,7 @@
   color: blue;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .Company_working_type_remote:hover {
   background-color: rgba(0, 0, 255, 0.126);

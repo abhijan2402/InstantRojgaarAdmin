@@ -2,6 +2,8 @@ import React from 'react';
 import './Card.css';
 import { db } from '../../firebase';
 import { doc, updateDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const JobCard = ({ handleJobDetailsPage, JobData, refreshData }) => {
     const handleApprove = async () => {
@@ -10,10 +12,10 @@ const JobCard = ({ handleJobDetailsPage, JobData, refreshData }) => {
             await updateDoc(jobRef, {
                 status: 'approved'
             });
-            alert('Job status updated to approved');
+            toast.success('Job status updated to approved');
             refreshData(); // Refresh data after updating status
         } catch (error) {
-            console.error('Error updating document: ', error);
+            toast.error('Error updating document: ' + error.message);
         }
     };
 
@@ -23,10 +25,10 @@ const JobCard = ({ handleJobDetailsPage, JobData, refreshData }) => {
             await updateDoc(jobRef, {
                 status: 'rejected'
             });
-            alert('Job status updated to rejected');
+            toast.success('Job status updated to rejected');
             refreshData(); // Refresh data after updating status
         } catch (error) {
-            console.error('Error updating document: ', error);
+            toast.error('Error updating document: ' + error.message);
         }
     };
 

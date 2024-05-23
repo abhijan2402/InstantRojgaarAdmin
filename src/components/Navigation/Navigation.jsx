@@ -9,7 +9,7 @@ const Navigation = () => {
     return (
         <>
             <div className="top_nav">
-                <h1 className="logo">LOGO</h1>
+                <h1 className="logo">InstaRogar</h1>
             </div>
             <div className="nav_content_container">
                 <div className="content_board">

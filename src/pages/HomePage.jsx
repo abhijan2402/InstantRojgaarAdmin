@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './HomePage.css';
 import NewCompanies from '../components/NewCompanies/NewCompanies';
 import NewJobs from '../components/NewJobs/NewJobs';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const HomePage = () => {
     const [showCompanies, setShowCompanies] = useState(true);
     const [showJobs, setShowJobs] = useState(false);
@@ -28,6 +29,7 @@ const HomePage = () => {
 
             {showCompanies && <NewCompanies />}
             {showJobs && <NewJobs />}
+            <ToastContainer />
         </div>
     );
 };
