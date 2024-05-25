@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/jobadmin/static/css/main.b38d4b96.css",
-    "main.js": "/jobadmin/static/js/main.8b87ca67.js",
-    "index.html": "/jobadmin/index.html",
-    "main.b38d4b96.css.map": "/jobadmin/static/css/main.b38d4b96.css.map",
-    "main.8b87ca67.js.map": "/jobadmin/static/js/main.8b87ca67.js.map"
+    "main.css": "/InstantRojgaarAdmin/static/css/main.b38d4b96.css",
+    "main.js": "/InstantRojgaarAdmin/static/js/main.85b7cd84.js",
+    "index.html": "/InstantRojgaarAdmin/index.html",
+    "main.b38d4b96.css.map": "/InstantRojgaarAdmin/static/css/main.b38d4b96.css.map",
+    "main.85b7cd84.js.map": "/InstantRojgaarAdmin/static/js/main.85b7cd84.js.map"
   },
   "entrypoints": [
     "static/css/main.b38d4b96.css",
-    "static/js/main.8b87ca67.js"
+    "static/js/main.85b7cd84.js"
   ]
 }
