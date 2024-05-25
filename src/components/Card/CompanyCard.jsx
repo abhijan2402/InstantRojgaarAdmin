@@ -45,7 +45,7 @@ const CompanyCard = ({ SeekerData, refreshData }) => {
           </div>
           <div className="Company_profile_doc">
             <a href={SeekerData.Certificate} target="_blank" rel="noopener noreferrer" download className='Company_working_type_remote'>
-              <i className="bi bi-file-earmark-text-fill" style={{ fontSize: "30px", marginRight: "5px" }}></i> Docs
+              <i className="bi bi-file-earmark-text-fill" style={{ fontSize: "30px", marginRight: "1px" }}></i> Certificate
             </a>
           </div>
         </div>

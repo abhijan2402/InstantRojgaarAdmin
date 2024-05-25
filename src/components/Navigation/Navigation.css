@@ -1,11 +1,30 @@
-/* styles.css */
 .top_nav {
   background-color: #007bff;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 .top_nav .logo {
   padding: 1rem 2rem;
   letter-spacing: 0.1rem;
+}
+.nav_links {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-right: 4rem;
+}
+.nav_links ul {
+  display: flex;
+  gap: 3rem;
+}
+.nav_links ul li {
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 0.1rem; 
+}
+.nav_links ul li.active {
+  border-bottom: 2px solid #fff; 
 }
 .nav_content_container {
   display: flex;
@@ -32,7 +51,7 @@
 
 .admin-nav li {
   padding: 1rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
 }
@@ -49,5 +68,3 @@
 .admin-companies {
   padding: 20px;
 }
-
-/* Add more styles for other components as needed */
