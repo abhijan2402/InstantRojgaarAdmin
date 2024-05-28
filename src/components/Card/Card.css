@@ -3,7 +3,7 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   padding: 1.2rem 0rem 1rem 0rem;
   border-radius: 4px;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 .job_details {
   display: flex;
@@ -20,7 +20,7 @@
   align-items: center;
   gap: 4rem;
 }
-.job_profile_company_dec h5 {  
+.job_profile_company_dec h5 {
   font-size: 1.2rem;
 }
 .job_profile_company_dec span {
@@ -59,7 +59,12 @@
 }
 .job_working_type {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+.job_mode{
+  font-weight: 600;
+  font-size: 16px;
 }
 .apply_job {
   cursor: pointer;
@@ -79,58 +84,33 @@
   font-size: 0.8rem;
   transition: 0.3s;
   color: red;
+  background-color: rgba(255, 0, 0, 0.084);
 }
 .job_working_type_full:hover {
   border: 1px solid red;
   background-color: rgba(255, 0, 0, 0.084);
 }
-.job_working_type_part {
-  border: 1px solid rgba(0, 128, 0, 0.827);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.8rem;
+.reject_btn {
+  color: rgba(255, 0, 0, 0.684);
   transition: 0.3s;
-  color: green;
+  font-weight: 700;
 }
-.job_working_type_part:hover {
-  background-color: rgba(0, 128, 0, 0.097);
-}
-.job_working_type_remote {
-  border: 1px solid rgba(0, 0, 255, 0.668);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: 0.3s;
-  color: blue;
-}
-.job_working_type_remote:hover {
-  background-color: rgba(0, 0, 255, 0.126);
-}
-
-
-.reject_btn{
-color: rgba(255, 0, 0, 0.684);
-transition: 0.3s;
-font-weight: 700;
-}
-.approve_btn{
+.approve_btn {
   color: rgba(0, 128, 0, 0.744);
   transition: 0.3s;
   font-weight: 700;
-  }
-  .details_btn{
-    color: #1966d2d5;
-    transition: 0.3s;
-    font-weight: 700;
-    }
-.reject_btn:hover{
-color: red;
 }
-.approve_btn:hover{
+.details_btn {
+  color: #1966d2d5;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.reject_btn:hover {
+  color: red;
+}
+.approve_btn:hover {
   color: green;
 }
-.details_btn:hover{
+.details_btn:hover {
   color: #1967d2;
 }

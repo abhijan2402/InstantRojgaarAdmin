@@ -51,9 +51,8 @@ const JobCard = ({ handleJobDetailsPage, JobData, refreshData }) => {
             </div>
             <div className=" job-type">
                 <div className="job_working_type">
-                    <p className='job_working_type_full'>Full Time</p>
-                    <p className='job_working_type_part'>Part Time</p>
-                    <p className='job_working_type_remote'>Remote</p>
+                    <p className='job_mode'>Job Mode: </p>
+                    <p className='job_working_type_full'>{JobData.JobMode}</p>
                 </div>
                 <div className=" apply_job">
                     <p className="approve_btn" onClick={handleApprove}><i className="bi bi-box-arrow-in-right"></i> Approve</p>
