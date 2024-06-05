@@ -2,21 +2,28 @@ import React, { useState } from 'react';
 import './Navigation.css';
 import NewCompanies from '../NewCompanies/NewCompanies';
 import NewJobs from '../NewJobs/NewJobs';
+import AllJobs from '../AllJobs/AllJobs';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AllCompanies from '../AllCompanies/AllCompanies';
 
 const Navigation = () => {
-    const [showCompanies, setShowCompanies] = useState(true);
-    const [showJobs, setShowJobs] = useState(false);
+    const [activeComponent, setActiveComponent] = useState('newCompanies');
 
     const handleShowCompanies = () => {
-        setShowCompanies(true);
-        setShowJobs(false);
+        setActiveComponent('newCompanies');
     };
 
     const handleShowJobs = () => {
-        setShowJobs(true);
-        setShowCompanies(false);
+        setActiveComponent('newJobs');
+    };
+
+    const handleShowAllJobs = () => {
+        setActiveComponent('allJobs');
+    };
+
+    const handleShowAllCompanies = () => {
+        setActiveComponent('allCompanies');
     };
 
     return (
@@ -27,15 +34,27 @@ const Navigation = () => {
                     <ul>
                         <li
                             onClick={handleShowCompanies}
-                            className={showCompanies ? 'active' : ''}
+                            className={activeComponent === 'newCompanies' ? 'active' : ''}
                         >
                             New Companies
                         </li>
                         <li
                             onClick={handleShowJobs}
-                            className={showJobs ? 'active' : ''}
+                            className={activeComponent === 'newJobs' ? 'active' : ''}
                         >
                             New Jobs
+                        </li>
+                        <li
+                            onClick={handleShowAllJobs}
+                            className={activeComponent === 'allJobs' ? 'active' : ''}
+                        >
+                            All Jobs
+                        </li>
+                        <li
+                            onClick={handleShowAllCompanies}
+                            className={activeComponent === 'handleShowAllCompanies' ? 'active' : ''}
+                        >
+                            All Companies
                         </li>
                     </ul>
                 </div>
@@ -45,8 +64,10 @@ const Navigation = () => {
                     <div className='landingPage_main_container'>
                         <h1>Welcome to the Dashboard!!!</h1>
                     </div>
-                    {showCompanies && <NewCompanies />}
-                    {showJobs && <NewJobs />}
+                    {activeComponent === 'newCompanies' && <NewCompanies />}
+                    {activeComponent === 'newJobs' && <NewJobs />}
+                    {activeComponent === 'allJobs' && <AllJobs />}
+                    {activeComponent === 'allCompanies' && <AllCompanies/>}
                     <ToastContainer />
                 </div>
             </div>

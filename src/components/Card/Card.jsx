@@ -40,7 +40,7 @@ const JobCard = ({ handleJobDetailsPage, JobData, refreshData }) => {
                         <h5>{JobData.jobRole} <br /> <span>{JobData.CompanyName}</span> </h5>
                     </div>
                     <div className="job_profile_dec">
-                        <p><span>Salary:</span> {JobData.Salary}</p>
+                        <p><span>Salary:</span> {JobData.Salart}</p>
                         <p><span>Minimum Experience:</span> {JobData.MinExp}</p>
                     </div>
                     <div className="job_profile_dec">

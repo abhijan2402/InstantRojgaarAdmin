@@ -5,6 +5,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 
 const JobDetails = ({ company, refreshData, setDetails }) => {
+    console.log("detils",company);
     const handleApprove = async () => {
         try {
             const jobRef = doc(db, 'JobList', company.id);
@@ -42,7 +43,7 @@ const JobDetails = ({ company, refreshData, setDetails }) => {
                             <h5>{company.jobRole} <br /> <span>{company.CompanyName}</span> </h5>
                         </div>
                         <div className="job_details_dec">
-                            <p><span>Salary:</span> {company.salary}</p>
+                            <p><span>Salary:</span>{company.salart}</p>
                             <p><span>Minimum Experience:</span> {company.MinExp}</p>
                         </div>
                         <div className="job_details_dec">
